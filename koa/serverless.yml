@@ -1,0 +1,20 @@
+app: appDemo
+stage: dev
+component: koa
+name: koaDemo
+inputs:
+  src:
+    src: ./
+    exclude:
+      - .env
+  functionConf:
+    name: ${name}
+    environment: #  环境变量
+      variables: #  环境变量数组
+        TEST: vale
+        ENV: TEST
+        ENV2: TEST2
+  apigatewayConf:
+    protocols:
+      - http
+      - https
